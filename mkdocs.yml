@@ -1,0 +1,8 @@
+site_name: Human Gait Analysis Blog
+
+nav:
+  - Home: index.md
+  - Introduction: 01-introduction.md
+
+theme:
+  name: material
