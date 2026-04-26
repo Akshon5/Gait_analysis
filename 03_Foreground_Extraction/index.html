@@ -9,6 +9,8 @@
       
       
       
+        <link rel="prev" href="../02-video_preprocessing/">
+      
       
       
         
@@ -19,7 +21,7 @@
     
     
       
-        <title>Foreground Extraction using Background Subtraction - Human Gait Analysis Blog</title>
+        <title>Foreground Extraction - Human Gait Analysis Blog</title>
       
     
     
@@ -96,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Foreground Extraction using Background Subtraction
+              Foreground Extraction
             
           </span>
         </div>
@@ -262,6 +264,224 @@
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Foreground Extraction
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Foreground Extraction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-background-subtraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Background Subtraction?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-used-mog2-mixture-of-gaussians" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Method Used: MOG2 (Mixture of Gaussians)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Method Used: MOG2 (Mixture of Gaussians)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-mog2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why MOG2?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-initialize-background-subtractor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Initialize Background Subtractor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-process-video-frames" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Process Video Frames
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-post-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Post-processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-extract-silhouette" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Extract Silhouette
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#challenges-and-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenges and Limitations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusion
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
