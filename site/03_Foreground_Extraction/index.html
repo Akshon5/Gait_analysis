@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../02-video_preprocessing/">
       
       
-        <link rel="next" href="../02-video_preprocessing/">
+        <link rel="next" href="../04-gait-analysis/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>Introduction - Human Gait Analysis Blog</title>
+        <title>Foreground Extraction - Human Gait Analysis Blog</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#beginning-our-journey-into-human-gait-analysis-using-computer-vision" class="md-skip">
+        <a href="#foreground-extraction-using-background-subtraction" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Foreground Extraction
             
           </span>
         </div>
@@ -220,37 +220,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Introduction
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../01-introduction/" class="md-nav__link">
         
   
   
@@ -266,70 +239,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#understanding-the-problem" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Understanding the Problem
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#our-approach" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Our Approach
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#initial-challenges" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Initial Challenges
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#moving-forward" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Moving Forward
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -365,10 +274,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../03_Foreground_Extraction/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Foreground Extraction
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -384,6 +320,170 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-background-subtraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Background Subtraction?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-used-mog2-mixture-of-gaussians" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Method Used: MOG2 (Mixture of Gaussians)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Method Used: MOG2 (Mixture of Gaussians)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-mog2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why MOG2?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-initialize-background-subtractor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Initialize Background Subtractor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-process-video-frames" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Process Video Frames
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-post-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Post-processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-extract-silhouette" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Extract Silhouette
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#challenges-and-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenges and Limitations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusion
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -469,10 +569,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#understanding-the-problem" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Understanding the Problem
+        Introduction
       
     </span>
   </a>
@@ -480,10 +580,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#our-approach" class="md-nav__link">
+  <a href="#what-is-background-subtraction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Our Approach
+        What is Background Subtraction?
       
     </span>
   </a>
@@ -491,10 +591,99 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#initial-challenges" class="md-nav__link">
+  <a href="#method-used-mog2-mixture-of-gaussians" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Initial Challenges
+        Method Used: MOG2 (Mixture of Gaussians)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Method Used: MOG2 (Mixture of Gaussians)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-mog2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why MOG2?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-initialize-background-subtractor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Initialize Background Subtractor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-process-video-frames" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Process Video Frames
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-post-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Post-processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-extract-silhouette" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Extract Silhouette
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output
       
     </span>
   </a>
@@ -502,10 +691,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#moving-forward" class="md-nav__link">
+  <a href="#challenges-and-limitations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Moving Forward
+        Challenges and Limitations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusion
       
     </span>
   </a>
@@ -529,50 +729,110 @@
 
 
 
-<h1 id="beginning-our-journey-into-human-gait-analysis-using-computer-vision">Beginning Our Journey into Human Gait Analysis Using Computer Vision</h1>
-<p>In this Computer Vision Lab, my team and I began exploring real-world healthcare and rehabilitation challenges that could be addressed using classical computer vision techniques. Our objective was to identify a problem that was both practically relevant and technically feasible without relying heavily on deep learning frameworks.</p>
-<p>During our initial exploration, we considered several domains. Applications such as traffic monitoring, facial recognition, and disease detection were evaluated. However, many of these problems required large annotated datasets and complex deep learning architectures, which were beyond the intended scope of a classical computer vision–based system.</p>
-<p>After careful consideration, we identified a significant healthcare challenge: human gait analysis for rehabilitation and mobility assessment.</p>
+<h1 id="foreground-extraction-using-background-subtraction">Foreground Extraction using Background Subtraction</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Foreground extraction is a crucial step in any gait analysis system. Before we can analyze how a person walks, we first need to isolate the moving subject from the background. This ensures that irrelevant information such as static objects, lighting variations, or environmental noise does not interfere with motion analysis.</p>
+<p>In this project, we use background subtraction techniques to extract the human silhouette from video frames. This processed output becomes the foundation for further steps like feature extraction and gait pattern analysis.</p>
 <hr />
-<h2 id="understanding-the-problem">Understanding the Problem</h2>
-<p>Human gait refers to the pattern of walking exhibited by an individual. In rehabilitation centres and physiotherapy clinics, gait assessment is often performed through manual observation. Clinicians visually evaluate posture, stride length, walking symmetry, and balance to assess recovery progress.</p>
-<p>While this method is valuable, it presents several limitations:</p>
+<h2 id="what-is-background-subtraction">What is Background Subtraction?</h2>
+<p>Background subtraction is a computer vision technique used to separate moving objects (foreground) from a static scene (background).</p>
+<p>The basic idea is simple:</p>
 <ul>
-<li>Subjective interpretation  </li>
-<li>Inconsistency across sessions  </li>
-<li>Difficulty detecting subtle improvements  </li>
-<li>Lack of quantifiable data for long-term tracking  </li>
+<li>Maintain a model of the background</li>
+<li>Compare each incoming frame with this model</li>
+<li>Identify pixels that differ significantly → mark them as foreground</li>
 </ul>
-<p>These limitations highlighted the need for a system capable of transforming walking patterns into measurable and objective data.</p>
+<p>This works especially well for surveillance-style or static camera setups, which is ideal for gait analysis.</p>
 <hr />
-<h2 id="our-approach">Our Approach</h2>
-<p><img alt="img_1.png" src="../img_1.png" /></p>
-<p>To address this problem, we propose a computer vision–based gait analysis system that processes walking videos and extracts meaningful motion and shape information.</p>
-<p>Our system is designed to:</p>
+<h2 id="method-used-mog2-mixture-of-gaussians">Method Used: MOG2 (Mixture of Gaussians)</h2>
+<p>We use the <strong>MOG2 (Mixture of Gaussians Version 2)</strong> algorithm provided by OpenCV.</p>
+<h3 id="why-mog2">Why MOG2?</h3>
 <ul>
-<li>Capture walking sequences using a fixed camera setup  </li>
-<li>Extract silhouettes from video frames  </li>
-<li>Analyse motion across time  </li>
-<li>Compute gait-related metrics such as stride length, walking speed, and step frequency  </li>
-<li>Classify gait patterns into normal or abnormal categories  </li>
+<li>Adapts to gradual lighting changes</li>
+<li>Handles dynamic backgrounds (like moving leaves or shadows)</li>
+<li>Automatically updates the background model over time</li>
+<li>Detects shadows (optional feature)</li>
 </ul>
-<p>Unlike deep learning-heavy solutions, our focus is on building an interpretable and structured pipeline using classical computer vision techniques. This ensures computational efficiency and makes the system suitable for controlled rehabilitation environments.</p>
+<p>Instead of treating each pixel as static, MOG2 models each pixel as a mixture of Gaussian distributions, allowing flexibility in real-world conditions.</p>
 <hr />
-<h2 id="initial-challenges">Initial Challenges</h2>
-<p>As we begin development, we recognise several technical challenges:</p>
+<h2 id="implementation-steps">Implementation Steps</h2>
+<h3 id="1-initialize-background-subtractor">1. Initialize Background Subtractor</h3>
+<pre><code class="language-python">import cv2
+
+backSub = cv2.createBackgroundSubtractorMOG2(
+    history=500,
+    varThreshold=16,
+    detectShadows=True
+)
+</code></pre>
+<h3 id="2-process-video-frames">2. Process Video Frames</h3>
+<p>Each frame from the input video is passed through the subtractor:</p>
+<pre><code class="language-python">ret, frame = cap.read()
+fgMask = backSub.apply(frame)
+</code></pre>
 <ul>
-<li>Ensuring consistent lighting and background conditions  </li>
-<li>Accurately extracting clean silhouettes  </li>
-<li>Detecting subtle motion variations  </li>
-<li>Maintaining feature consistency across sessions  </li>
-<li>Designing a reliable classification strategy  </li>
+<li><code>fgMask</code> contains the extracted foreground</li>
+<li>White pixels → moving object</li>
+<li>Black pixels → background</li>
 </ul>
-<p>Addressing these challenges will require careful experimentation and systematic evaluation.</p>
+<h3 id="3-post-processing">3. Post-processing</h3>
+<p>Raw masks often contain noise. To improve quality:</p>
+<pre><code class="language-python">kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5))
+
+fgMask = cv2.morphologyEx(fgMask, cv2.MORPH_OPEN, kernel)
+fgMask = cv2.morphologyEx(fgMask, cv2.MORPH_CLOSE, kernel)
+</code></pre>
+<p><strong>Purpose:</strong>
+- Opening removes small noise
+- Closing fills gaps in the detected object</p>
+<h3 id="4-extract-silhouette">4. Extract Silhouette</h3>
+<p>We focus on the largest contour (assumed to be the person):</p>
+<pre><code class="language-python">contours, _ = cv2.findContours(fgMask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+if contours:
+    largest_contour = max(contours, key=cv2.contourArea)
+    mask = cv2.drawContours(
+        np.zeros_like(fgMask),
+        [largest_contour],
+        -1,
+        255,
+        thickness=cv2.FILLED
+    )
+</code></pre>
+<p>This produces a clean silhouette of the walking subject.</p>
 <hr />
-<h2 id="moving-forward">Moving Forward</h2>
-<p>This project represents more than a technical implementation. It is an opportunity to bridge computer vision with practical healthcare applications. By transforming visual walking patterns into quantitative insights, we aim to contribute toward more objective and data-driven rehabilitation assessment.</p>
-<p>In the upcoming sections, we will detail the system architecture, processing pipeline, and feature extraction strategies that form the foundation of our gait analysis framework.</p>
-<p>Stay tuned as we continue documenting our progress and technical development.</p>
+<h2 id="output">Output</h2>
+<p>After processing, we obtain:</p>
+<ul>
+<li>✅ Binary foreground mask</li>
+<li>✅ Clean human silhouette</li>
+<li>✅ Reduced background noise</li>
+</ul>
+<p>This output is then used for:</p>
+<ul>
+<li>Pose estimation</li>
+<li>Gait cycle detection</li>
+<li>Feature extraction</li>
+</ul>
+<hr />
+<h2 id="challenges-and-limitations">Challenges and Limitations</h2>
+<p>While effective, background subtraction has some limitations:</p>
+<ul>
+<li>Sensitive to sudden lighting changes</li>
+<li>Shadows may be detected as part of the foreground</li>
+<li>Requires a relatively static camera</li>
+<li>Struggles with overlapping objects</li>
+</ul>
+<p>To mitigate these:</p>
+<ul>
+<li>Morphological operations are applied</li>
+<li>Shadow detection is enabled in MOG2</li>
+<li>Proper threshold tuning is used</li>
+</ul>
+<hr />
+<h2 id="conclusion">Conclusion</h2>
+<p>Foreground extraction using background subtraction provides a reliable and efficient way to isolate the walking subject in gait analysis. By using MOG2 and applying post-processing techniques, we achieve a clean representation of human motion that is suitable for further analysis.</p>
+<p>This step acts as the gateway between raw video input and meaningful gait insights, making it one of the most critical components of the pipeline.</p>
 
 
 

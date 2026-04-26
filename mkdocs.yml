@@ -4,6 +4,11 @@ nav:
   - Home: index.md
   - Introduction: 01-introduction.md
   - Video Preprocessing: 02-video_preprocessing.md
+  - Foreground Extraction: 03_Foreground_Extraction.md
+  - Gait Analysis: 04-gait-analysis.md
+  - Deployment & Misc: 05-Deployment.md
+
+
 
 theme:
   name: material
