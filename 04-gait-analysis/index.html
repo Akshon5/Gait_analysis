@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../03_Foreground_Extraction/">
       
       
-        <link rel="next" href="../02-video_preprocessing/">
+        <link rel="next" href="../05-Deployment/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>Introduction - Human Gait Analysis Blog</title>
+        <title>Gait Analysis - Human Gait Analysis Blog</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#beginning-our-journey-into-human-gait-analysis-using-computer-vision" class="md-skip">
+        <a href="#gait-cycle-analysis-and-system-insights" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Gait Analysis
             
           </span>
         </div>
@@ -220,37 +220,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Introduction
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../01-introduction/" class="md-nav__link">
         
   
   
@@ -266,70 +239,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#understanding-the-problem" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Understanding the Problem
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#our-approach" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Our Approach
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#initial-challenges" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Initial Challenges
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#moving-forward" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Moving Forward
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -392,10 +301,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../04-gait-analysis/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gait Analysis
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -411,6 +347,136 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-motion-to-signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From Motion to Signal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signal-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signal Representation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-gait-cycles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding Gait Cycles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-extraction-from-gait" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature Extraction from Gait
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-observations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Observations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Integration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-of-the-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations of the System
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future Improvements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusion
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -469,10 +535,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#understanding-the-problem" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Understanding the Problem
+        Overview
       
     </span>
   </a>
@@ -480,10 +546,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#our-approach" class="md-nav__link">
+  <a href="#from-motion-to-signal" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Our Approach
+        From Motion to Signal
       
     </span>
   </a>
@@ -491,10 +557,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#initial-challenges" class="md-nav__link">
+  <a href="#signal-representation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Initial Challenges
+        Signal Representation
       
     </span>
   </a>
@@ -502,10 +568,76 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#moving-forward" class="md-nav__link">
+  <a href="#understanding-gait-cycles" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Moving Forward
+        Understanding Gait Cycles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-extraction-from-gait" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature Extraction from Gait
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-observations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Observations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Integration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-of-the-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations of the System
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future Improvements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusion
       
     </span>
   </a>
@@ -529,50 +661,108 @@
 
 
 
-<h1 id="beginning-our-journey-into-human-gait-analysis-using-computer-vision">Beginning Our Journey into Human Gait Analysis Using Computer Vision</h1>
-<p>In this Computer Vision Lab, my team and I began exploring real-world healthcare and rehabilitation challenges that could be addressed using classical computer vision techniques. Our objective was to identify a problem that was both practically relevant and technically feasible without relying heavily on deep learning frameworks.</p>
-<p>During our initial exploration, we considered several domains. Applications such as traffic monitoring, facial recognition, and disease detection were evaluated. However, many of these problems required large annotated datasets and complex deep learning architectures, which were beyond the intended scope of a classical computer vision–based system.</p>
-<p>After careful consideration, we identified a significant healthcare challenge: human gait analysis for rehabilitation and mobility assessment.</p>
+<h1 id="gait-cycle-analysis-and-system-insights">Gait Cycle Analysis and System Insights</h1>
+<h2 id="overview">Overview</h2>
+<p>After preprocessing the video and extracting the foreground silhouette, the system is now equipped with a simplified representation of human motion. The final stage focuses on analyzing this motion to extract meaningful gait patterns.</p>
+<p>Gait analysis involves studying repetitive walking cycles and identifying key characteristics such as rhythm, symmetry, and step frequency. This stage transforms visual motion into quantifiable insights.</p>
 <hr />
-<h2 id="understanding-the-problem">Understanding the Problem</h2>
-<p>Human gait refers to the pattern of walking exhibited by an individual. In rehabilitation centres and physiotherapy clinics, gait assessment is often performed through manual observation. Clinicians visually evaluate posture, stride length, walking symmetry, and balance to assess recovery progress.</p>
-<p>While this method is valuable, it presents several limitations:</p>
+<h2 id="from-motion-to-signal">From Motion to Signal</h2>
+<p>Once the subject is isolated, their movement over time can be represented as a signal. Instead of analyzing raw frames, the system tracks how certain properties of the subject change across consecutive frames.</p>
+<p>Some commonly used motion features include:</p>
 <ul>
-<li>Subjective interpretation  </li>
-<li>Inconsistency across sessions  </li>
-<li>Difficulty detecting subtle improvements  </li>
-<li>Lack of quantifiable data for long-term tracking  </li>
+<li>Centroid position of the silhouette  </li>
+<li>Height or width of the bounding box  </li>
+<li>Number of foreground pixels (area)  </li>
+<li>Vertical displacement of the body  </li>
 </ul>
-<p>These limitations highlighted the need for a system capable of transforming walking patterns into measurable and objective data.</p>
+<p>For example, tracking the vertical centroid across frames produces a waveform-like signal that reflects the walking motion.</p>
+<p>This transformation from spatial motion to temporal data is crucial, as it allows the use of signal processing techniques such as peak detection and frequency analysis.</p>
 <hr />
-<h2 id="our-approach">Our Approach</h2>
-<p><img alt="img_1.png" src="../img_1.png" /></p>
-<p>To address this problem, we propose a computer vision–based gait analysis system that processes walking videos and extracts meaningful motion and shape information.</p>
-<p>Our system is designed to:</p>
+<h2 id="signal-representation">Signal Representation</h2>
+<p>The generated motion signal typically shows periodic behavior:</p>
 <ul>
-<li>Capture walking sequences using a fixed camera setup  </li>
-<li>Extract silhouettes from video frames  </li>
-<li>Analyse motion across time  </li>
-<li>Compute gait-related metrics such as stride length, walking speed, and step frequency  </li>
-<li>Classify gait patterns into normal or abnormal categories  </li>
+<li>Peaks → correspond to one phase of the step (e.g., foot lift)  </li>
+<li>Troughs → correspond to another phase (e.g., foot contact)  </li>
 </ul>
-<p>Unlike deep learning-heavy solutions, our focus is on building an interpretable and structured pipeline using classical computer vision techniques. This ensures computational efficiency and makes the system suitable for controlled rehabilitation environments.</p>
+<p>This repeating pattern forms the basis of gait cycle detection.</p>
+<p>Noise in the signal may arise due to:
+- Imperfect foreground extraction<br />
+- Shadow artifacts<br />
+- Frame-to-frame inconsistencies  </p>
+<p>To improve signal quality, smoothing techniques such as moving average filtering can be applied.</p>
 <hr />
-<h2 id="initial-challenges">Initial Challenges</h2>
-<p>As we begin development, we recognise several technical challenges:</p>
+<h2 id="understanding-gait-cycles">Understanding Gait Cycles</h2>
+<p>A gait cycle refers to one complete sequence of steps taken by a person. In a walking pattern, these cycles repeat periodically.</p>
+<p>By analyzing the motion signal, repeating peaks can be identified. The distance between consecutive peaks represents one cycle.</p>
+<p>Cycle detection enables the system to:</p>
 <ul>
-<li>Ensuring consistent lighting and background conditions  </li>
-<li>Accurately extracting clean silhouettes  </li>
-<li>Detecting subtle motion variations  </li>
-<li>Maintaining feature consistency across sessions  </li>
-<li>Designing a reliable classification strategy  </li>
+<li>Estimate step count by counting peaks  </li>
+<li>Measure walking frequency using time intervals between cycles  </li>
+<li>Analyze consistency by comparing cycle durations  </li>
 </ul>
-<p>Addressing these challenges will require careful experimentation and systematic evaluation.</p>
+<p>For example:</p>
+<ul>
+<li>Shorter intervals → faster walking speed  </li>
+<li>Irregular intervals → unstable gait  </li>
+</ul>
 <hr />
-<h2 id="moving-forward">Moving Forward</h2>
-<p>This project represents more than a technical implementation. It is an opportunity to bridge computer vision with practical healthcare applications. By transforming visual walking patterns into quantitative insights, we aim to contribute toward more objective and data-driven rehabilitation assessment.</p>
-<p>In the upcoming sections, we will detail the system architecture, processing pipeline, and feature extraction strategies that form the foundation of our gait analysis framework.</p>
-<p>Stay tuned as we continue documenting our progress and technical development.</p>
+<h2 id="feature-extraction-from-gait">Feature Extraction from Gait</h2>
+<p>Once cycles are detected, several meaningful features can be derived:</p>
+<ul>
+<li><strong>Step Frequency</strong>: Number of steps per second  </li>
+<li><strong>Cycle Duration</strong>: Time taken for one complete gait cycle  </li>
+<li><strong>Amplitude of Motion</strong>: Indicates intensity of movement  </li>
+<li><strong>Symmetry</strong>: Comparison between alternate steps  </li>
+</ul>
+<p>These features form the foundation for higher-level gait analysis and potential classification tasks.</p>
+<hr />
+<h2 id="key-observations">Key Observations</h2>
+<p>Through the analysis process, several important observations can be made:</p>
+<ul>
+<li>Walking patterns exhibit periodic behavior  </li>
+<li>The amplitude of motion varies with walking speed  </li>
+<li>Irregularities in the signal may indicate instability or variation in gait  </li>
+<li>Consistent patterns suggest stable and uniform motion  </li>
+</ul>
+<p>These observations help in interpreting human movement in a structured way.</p>
+<hr />
+<h2 id="system-integration">System Integration</h2>
+<p>At this stage, all components of the system come together:</p>
+<ol>
+<li><strong>Video Preprocessing</strong> ensures clean input frames  </li>
+<li><strong>Foreground Extraction</strong> isolates the subject  </li>
+<li><strong>Motion Representation</strong> converts movement into signals  </li>
+<li><strong>Gait Analysis</strong> extracts meaningful patterns  </li>
+</ol>
+<p>This pipeline acts like a transformation chain:
+<strong>Video → Silhouette → Signal → Insights</strong></p>
+<hr />
+<h2 id="limitations-of-the-system">Limitations of the System</h2>
+<p>While the system performs well under controlled conditions, certain limitations remain:</p>
+<ul>
+<li>Sensitivity to video quality and lighting conditions  </li>
+<li>Dependence on a fixed camera setup  </li>
+<li>Noise in foreground extraction affecting signal accuracy  </li>
+<li>Limited ability to handle multiple subjects  </li>
+<li>Reduced accuracy in highly dynamic environments  </li>
+</ul>
+<p>These factors can impact the reliability of the extracted gait features.</p>
+<hr />
+<h2 id="future-improvements">Future Improvements</h2>
+<p>Several enhancements can be considered to improve the system:</p>
+<ul>
+<li>Incorporating pose estimation (e.g., joint tracking) for finer analysis  </li>
+<li>Using machine learning models to classify gait patterns  </li>
+<li>Applying advanced filtering techniques to reduce noise  </li>
+<li>Improving robustness to lighting and background variations  </li>
+<li>Extending the system for real-time gait monitoring  </li>
+</ul>
+<p>These improvements can significantly enhance both accuracy and usability.</p>
+<hr />
+<h2 id="conclusion">Conclusion</h2>
+<p>The project demonstrates how classical computer vision techniques can be effectively used to analyze human gait. By systematically processing video data and extracting motion patterns, it is possible to convert raw visual input into structured and meaningful insights.</p>
+<p>This final stage highlights the complete transformation:
+from raw video frames to interpretable gait characteristics, completing the end-to-end analysis pipeline.</p>
 
 
 

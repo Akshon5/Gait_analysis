@@ -203,6 +203,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
@@ -219,6 +237,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sections
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipeline-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pipeline Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Idea
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final Insight
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -305,6 +397,60 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04-gait-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gait Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05-Deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deployment & Misc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -325,6 +471,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sections
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipeline-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pipeline Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Idea
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final Insight
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -343,12 +552,39 @@
 <h1 id="human-gait-analysis-using-computer-vision">Human Gait Analysis Using Computer Vision</h1>
 <p>This documentation presents the development of a classical computer vision–based system for human gait analysis in rehabilitation contexts.</p>
 <p>The project explores structured video preprocessing, silhouette extraction, and motion analysis techniques to transform walking patterns into quantifiable metrics.</p>
-<p>Use the navigation panel to access:</p>
+<hr />
+<h2 id="sections">Sections</h2>
+<p>Use the navigation panel to explore:</p>
 <ul>
 <li><strong>Introduction</strong> – Problem motivation and system overview  </li>
-<li><strong>Video Preprocessing</strong> – Frame processing, enhancement, and silhouette extraction pipeline  </li>
+<li><strong>Video Preprocessing</strong> – Frame extraction and enhancement  </li>
 <li><strong>Foreground Extraction</strong> – Background subtraction and silhouette generation  </li>
+<li><strong>Gait Analysis</strong> – Motion patterns and gait cycle insights  </li>
 </ul>
+<hr />
+<h2 id="pipeline-overview">Pipeline Overview</h2>
+<p>The system follows a structured pipeline:</p>
+<ol>
+<li>Video input  </li>
+<li>Frame extraction and preprocessing  </li>
+<li>Foreground extraction (silhouette generation)  </li>
+<li>Motion representation  </li>
+<li>Gait cycle analysis  </li>
+</ol>
+<hr />
+<h2 id="objective">Objective</h2>
+<p>The goal of this project is to build a lightweight and interpretable gait analysis system using classical computer vision techniques, without relying on complex deep learning models.</p>
+<hr />
+<h2 id="key-idea">Key Idea</h2>
+<p>Instead of using heavy models, this system focuses on:
+- Motion-based analysis<br />
+- Signal-based interpretation of movement<br />
+- Clear and explainable outputs  </p>
+<hr />
+<h2 id="final-insight">Final Insight</h2>
+<p>By progressively refining raw video data into structured motion signals, the system demonstrates how simple computer vision techniques can effectively capture and analyze human gait patterns.</p>
+<hr />
+<p>Use the sidebar to begin with the Introduction</p>
 
 
 
