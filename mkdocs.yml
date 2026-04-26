@@ -3,6 +3,7 @@ site_name: Human Gait Analysis Blog
 nav:
   - Home: index.md
   - Introduction: 01-introduction.md
+  - Video Preprocessing: 02-video_preprocessing.md
 
 theme:
   name: material
