@@ -38,6 +38,8 @@ The entire implementation is built using classical Computer Vision techniques wi
 ---
 
 ## Processing Pipeline
+
+```text
 Video Input
 
 ↓
@@ -75,6 +77,7 @@ Peak Detection
 ↓
 
 Gait Metric Computation
+```
 
 ---
 
@@ -101,21 +104,18 @@ The project computes several gait-related parameters:
 ---
 
 ## Repository Structure
+
+```text
 human_gait_analysis/
-
 │
-
 ├── dataset/
-
 ├── outputs/
-
 ├── gait_analysis.py
-
 ├── requirements.txt
-
 ├── README.md
-
 └── sample_results/
+```
+
 ---
 
 ## Installation
